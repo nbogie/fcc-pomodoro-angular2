@@ -1,0 +1,20 @@
+<div class="pomodoro" [ngClass]="{alarm:isSoundingAlarm}">
+    
+    <h1>Pomodoro Timer</h1>
+
+    <small>
+        Break Length: {{breakLen}}
+        Session Length: {{sessionLen}}
+    </small>
+    We'll have two spinners to control timer length and break length.
+    <app-spinner [duration]="breakLen" (changed)="changeBreakLength($event)" [name]="'Break Length'"></app-spinner>
+    <app-spinner [duration]="sessionLen" (changed)="changeSessionLength($event)" [name]="'Session Length'"></app-spinner>
+    
+    <div class="time-display">{{timeRemaining | durationClock}}</div>
+    
+    <button (click)="toggleRunning()" [ngClass]="{'btn-success':running, 'btn-warning':!running}" class="btn">Go!</button>
+
+    <button (click)="soundAlarm()" class="btn btn-warning">Test Alarm!</button>
+
+
+</div>

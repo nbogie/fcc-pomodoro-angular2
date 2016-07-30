@@ -1,3 +1,7 @@
 .alarm {
     background-color: darkorange;
 }
+
+.time-display {
+    font-size: 3em;
+}

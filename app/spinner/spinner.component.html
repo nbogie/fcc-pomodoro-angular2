@@ -3,8 +3,8 @@
 </div>
 
 <div class="row">
-    <button (click)="decDuration(10)" class="btn btn btn-primary">-</button>
-    <button (click)="decDuration(1)" class="btn btn-sm btn-primary">-</button> {{duration}}
+    <button (click)="incDuration(-10)" class="btn btn btn-primary">-</button>
+    <button (click)="incDuration(-1)" class="btn btn-sm btn-primary">-</button> {{duration}}
     <button (click)="incDuration(1)" class="btn btn-sm btn-primary">+</button>
     <button (click)="incDuration(10)" class="btn btn btn-primary">+</button>
 </div>

@@ -13,7 +13,8 @@
 
         <div class="time-display">{{timeRemaining | durationClock}}</div>
 
-        <button (click)="toggleRunning()" [ngClass]="{'btn-success':running, 'btn-warning':!running}" class="btn">Go!</button>
+        <button *ngIf="!isRunning" (click)="start()" class="btn btn-success">Go!</button>
+        <button *ngIf="isRunning" (click)="reset()" class="btn btn-warning">Reset!</button>
 
         <button (click)="soundAlarm()" class="btn btn-warning">Test Alarm!</button>
 
